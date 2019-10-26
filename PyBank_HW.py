@@ -8,7 +8,7 @@ import os
 
 #This is to set my current working directory
     #Change if you must. 
-pull_folder = '/Users/josephyi/Python-HW1/PyBank/Resources'
+pull_folder = '/Users/josephyi/Python-HW-1/PyBank/Resources'
 os.chdir(pull_folder)
 #=============================================================
 #This is to set 
