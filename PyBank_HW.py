@@ -23,7 +23,8 @@ def main():
 #This section of code is to calculate the total net amount of the csv file.      
         for money_row in bank_read:
             net_total += int(money_row[1])
-        #for average in 
+        for average in bank_read:
+            
 
 
     print("Financial Analysis")
