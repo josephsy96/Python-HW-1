@@ -19,11 +19,11 @@ def main():
         bank_read = csv.reader(bank_out, delimiter = ',')
         net_total = 0     
         average_change = 0.0
-        row_count = sum(1 for row in bank_read)
+        #row_count = sum(1 for row in bank_read)
 #This section of code is to calculate the total net amount of the csv file.      
         for money_row in bank_read:
             net_total += int(money_row[1])
-        for average in 
+        #for average in 
 
 
     print("Financial Analysis")
