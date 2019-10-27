@@ -31,11 +31,15 @@ with open(pybank, newline="") as bank_out:
 
     sub = int(net[-1]) - int(net[0])
     average_change = round(sub/(row_count - 1),2)
-
+    max_profit = max(map(int,net))
+    min_profit = min(map(int,net))
+    month = 0
 #output final product    
     print("Financial Analysis")
     print("---" * 10)
     print(f"Total Months: {row_count}")
     print(f"Net Total: ${net_total}")
     print(f"Average Change:${average_change}")
+    print(f"Greatest Increase in Profits: ${max_profit}")
+    print(f"Greatest Decrease in Profits: ${min_profit}")
     print("---" * 10)

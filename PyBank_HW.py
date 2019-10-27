@@ -22,7 +22,6 @@ with open(pybank, newline="") as bank_out:
     net_total = 0     
     #average_change = 0.0
     row_count = 0
-    net.append(bank_out[1])
         #row_count = sum(1 for row in bank_read)
 #This section of code is to calculate the total net amount of the csv file.      
     for money_row in bank_read:
