@@ -18,6 +18,7 @@ pybank = os.path.join('../Resources', 'budget_data.csv')
 #list created to compute later functions
 net = []
 date = []
+
 with open(pybank, newline="") as bank_out:
     net_header = next(bank_out)
     bank_read = csv.reader(bank_out, delimiter = ',')
@@ -33,13 +34,17 @@ with open(pybank, newline="") as bank_out:
     average_change = round(sub/(row_count - 1),2)
     max_profit = max(map(int,net))
     min_profit = min(map(int,net))
-    month = 0
+    dictionary = dict(zip(net,date))
+    max_month = dictionary[str(max_profit)]
+    min_month = dictionary[str(min_profit)]
 #output final product    
     print("Financial Analysis")
     print("---" * 10)
     print(f"Total Months: {row_count}")
     print(f"Net Total: ${net_total}")
     print(f"Average Change:${average_change}")
-    print(f"Greatest Increase in Profits: ${max_profit}")
-    print(f"Greatest Decrease in Profits: ${min_profit}")
+    print(f"Greatest Increase in Profits: {max_month} (${max_profit})")
+    print(f"Greatest Decrease in Profits: {min_month} (${min_profit})")
     print("---" * 10)
+    
+ 
