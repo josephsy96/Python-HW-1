@@ -14,19 +14,17 @@ os.chdir(pull_folder)
 #========================================================
 #This is to set the path
 pybank = os.path.join('../Resources', 'budget_data.csv')
-
 #========================================================
 #list created to compute later functions
 net = []
 date = []
-
 #========================================================
-
 with open(pybank, newline='') as bank_out:
     net_header = next(bank_out)
     bank_read = csv.reader(bank_out, delimiter = ',')
     #net_total = 0
 #========================================================
+#This section is to append data into the net and date lists.
     for csv_row in bank_read:
         net.append(csv_row[1])
         date.append(csv_row[0])
@@ -63,8 +61,7 @@ with open(pybank, newline='') as bank_out:
         print(f"Average Change:${average_change}",file=out)
         print(f"Greatest Increase in Profits: {max_month} (${max_profit})",file=out)
         print(f"Greatest Decrease in Profits: {min_month} (${min_profit})",file=out)
-        print("---" * 10,file=out)
-    
+        print("---" * 10,file=out)   
 #========================================================
 
 
