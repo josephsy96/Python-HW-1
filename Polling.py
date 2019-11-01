@@ -24,9 +24,9 @@ with open(pypoll, newline="") as outfile:
     for row in poll_read:
         vote.append(row[0])
         politics.append(row[2])
-for vote_index in range(len(politics)):
-    voting = str(politics[vote_index])
-    election = str(vote[vote_index])
+for vote_index in range(len(vote)):
+    voting = int(vote[vote_index])
+    election = str(politics[vote_index])
 
 
 total_votes = len(vote)
