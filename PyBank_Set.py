@@ -53,7 +53,7 @@ with open(pybank, newline='') as bank_out:
     print("---" * 10)
 #========================================================
 # This section outputs the print statements into a text file.
-    with open("output.txt", 'x') as out:   
+    with open("output.txt", 'w') as out:   
         print("Financial Analysis", file=out)
         print("---" * 10,file=out)
         print(f"Total Months: {row_count}",file=out)

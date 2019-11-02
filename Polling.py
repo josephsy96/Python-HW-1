@@ -57,7 +57,7 @@ print(f"Winner: {winner_name}")
 print("---" * 10)
 #==================================================
 #output to txt file
-with open("output.txt", 'x') as out:
+with open("output.txt", 'w') as out:
     print("Election Results",file=out)
     print("---" * 10,file=out)
     print(f"Total Votes: {total_votes}", file=out)
